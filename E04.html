@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //Problema
     /*
@@ -7,10 +8,32 @@
     */
 
     //Entrada
-
+    //Na próxima linha, a const pesoAtiv1 receberá o peso atribuído para a Atividade 1, especificado na descrição do problema
+    const pesoAtiv1 = 3
+    //Na próxima linha, a const pesoAtiv2 receberá o peso atribuído para a Atividade 2, especificado na descrição do problema
+    const pesoAtiv2 = 4
+    //Na próxima linha, a const pesoAtiv3 receberá o peso atribuído para a Atividade 3, especificado na descrição do problema
+    const pesoAtiv3 = 3
+    //Na próxima linha, a const notaAtiv1 receberá a nota que o aluno obteve na Atividade 1, que será informado pelo usuário
+    const notaAtiv1 = Number(prompt("Informe a nota obtida na primeira atividade avaliativa:"))
+    //Na próxima linha, a const notaAtiv2 receberá a nota que o aluno obteve na Atividade 2, que será informado pelo usuário
+    const notaAtiv2 = Number(prompt("Informe a nota obtida na segunda atividade avaliativa:"))
+    //Na próxima linha, a const notaAtiv3 receberá a nota que o aluno obteve na Atividade 3, que será informado pelo usuário
+    const notaAtiv3 = Number(prompt("Informe a nota obtida na terceira atividade avaliativa:"))
 
     //Processamento
-
+    //Na próxima linha, será atribuído para a const pesoTotal a somatória dos pesos de todas as atividades
+    const pesoTotal = pesoAtiv1 + pesoAtiv2 + pesoAtiv3
+    //Na próxima linha, será atribuído para a const finalNota1 o resultado da multiplicação da nota da primeira atividade pelo peso da primeira atividade
+    const finalNota1 = notaAtiv1 * pesoAtiv1
+    //Na próxima linha, será atribuído para a const finalNota2 o resultado da multiplicação da nota da segunda atividade pelo peso da segunda atividade
+    const finalNota2 = notaAtiv2 * pesoAtiv2
+    //Na próxima linha, será atribuído para a const finalNota1 o resultado da multiplicação da nota da terceira atividade pelo peso da terceira atividade
+    const finalNota3 = notaAtiv3 * pesoAtiv3
+    //Na próxima linha, a const mediaFinal receberá o resultado da somatória de todas as notas multiplicadas pelos respectivos pesos, dividido pelo peso total de todas as atividades avaliativas
+    const mediaFinal = (finalNota1 + finalNota2 + finalNota3) / pesoTotal
 
     //Saída
+    //Na próxima linha os dados solicitados são apresentados em tela.
+    document.write(`A média final obtida pelo aluno foi de ${mediaFinal.toFixed(2)}`)
 </script>

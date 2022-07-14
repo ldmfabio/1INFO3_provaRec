@@ -7,11 +7,26 @@
     */
 
     //ENTRADA
-
+    //Na próxima linha, a nota da primeira atividade avaliativa será informada pelo usuário
+    const nota1 = Number(prompt("Informe a nota da primeira atividade:"))
+    //Na próxima linha, o peso da primeira atividade avaliativa será informado pelo usuário
+    const pesoNota1 = parseInt(prompt("Informe o peso da primeira nota:"))
+    //Na próxima linha, a nota da segunda atividade avaliativa será informada pelo usuário
+    const nota2 = Number(prompt("Informe a nota da segunda atividade:"))
+    //Na próxima linha, o peso da segunda atividade avaliativa será informado pelo usuário
+    const pesoNota2 = parseInt(prompt("Informe o peso da segunda nota:"))
 
     //PROCESSAMENTO
-
+    //Na próxima linha, calcula-se o valor total da Nota 1, de acordo com o seu peso
+    const valorNota1 = nota1 * pesoNota1
+    //Na próxima linha, calcula-se o valor total da Nota 2, de acordo com o seu peso
+    const valorNota2 = nota2 * pesoNota2
+    //Na próxima linha, é somado o peso total das avaliações aplicadas
+    const pesoTotal = pesoNota1 + pesoNota2
+    //Na próxima linha, a média final é calculada. Na média ponderada são somados os valores de cada nota (já sendo o resultado da multiplicação da nota com o peso), depois dividido pela somatória dos pesos de todas as avaliações
+    const mediaFinal = (valorNota1 + valorNota2) / pesoTotal
 
     //SAÍDA
-
+    //Na próxima linha os dados solicitados são apresentados em tela. Lembre-se que o .toFixed(2) logo após a variável servirá para apresentar a média com, no máximo, duas casas decimais - dois números após a vírgula.
+    document.write(`A média final é de ${mediaFinal.toFixed(2)}`)
 </script>

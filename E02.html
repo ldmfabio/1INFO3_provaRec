@@ -7,11 +7,22 @@
     */
 
     //ENTRADA
-
+    //Na próxima linha, o valor do veículo será informado pelo usuário
+    const valorVeiculo = Number(prompt("Informe o valor total do veículo:"))
+    //Na próxima linha, se atribui a uma constante o valor da entrada do veículo. Não é necessário, fiz apenas para clarificar as operações que ocorrerão no programa
+    const entradaVeiculo = 5000
 
     //PROCESSAMENTO
-
+    //Na próxima linha, o valor financiado é calculado, subtraindo-se o valor de entrada dado para a compra do veículo
+    const valorFinanciado = valorVeiculo - entradaVeiculo
+    //Na próxima linha, o valor dos juros é calculado, conforme especificado no programa. Adicionam-se os 35% (ou seja, 35 por 100 -> que é o mesmo que 35 / 100 -> que é o mesmo que 35 sobre 100)
+    const valorJuros = valorFinanciado * 25 / 100
+    //Na próxima linha, o valor dos juros e o valor financiado são somados, que resultará no valor total financiado já considerando os juros decorrentes do financiamento
+    const valorFinanciadoComJuros = valorFinanciado + valorJuros
+    //Na próxima linha, o valor da parcela é calculado, conforme descrito no problema, indicando que o financiamento será pago em 48 parcelas
+    const valorParcela = valorFinanciadoComJuros / 48
 
     //SAÍDA
-
+    //Na próxima linha os dados solicitados são apresentados em tela.
+    document.write(`O valor total a ser financiado, com juros, será de R$ ${valorFinanciadoComJuros.toFixed(2)} e o valor da parcela será de R$ ${valorParcela.toFixed(2)}.`)
 </script>

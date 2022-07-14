@@ -8,11 +8,22 @@
     */
 
     //ENTRADA
-
+    //Na próxima linha, a quilometragem percorrida por litro de combustível é informada pelo usuário
+    const quilometrosPorLitro = Number(prompt("Informe quantos quilômetros a moto percorre por litro de combustível:"))
+    //Na próxima linha, a quilometragem total da motocicleta é informada pelo usuário
+    const quilometragemTotal = Number(prompt("Informe a quilometragem total da motocicleta:"))
 
     //PROCESSAMENTO
-
+    //Na próxima linha, são calculadas quantas revisões foram feitas na motocicleta, considerando que uma revisão é realizada a cada 2 mil quilômetros. 
+    //!!!IMPORTANTE!!! -> Não há separador de milhar na programação! Se você usar 2.000 (querendo sinalizar dois mil), o programa entenderá como apenas 2, e não 2 mil.
+    //A função Math.floor é utilizada, pois pretende-se utilizar o inteiro abaixo mais próximo, quando uam divisão não resultar um número inteiro. Por exemplo: 5000 quilômetros significa que a motocicleta passou por duas revisões! O resultado é obtido usando a função Math.floor. Se você não usar a função, o programa dirá que você passou por "duas revisões e meia", o que não é possível
+    const quantidadeRevisoes = Math.floor(quilometragemTotal / 2000)
+    //Na próxima linha, o custo das revisões será calculado. O valor de cada revisão é indicado no programa como 200 reais! Esse valor é multiplicado pela quantidade de revisões, que foi calculada na linha acima
+    const custoRevisoes = quantidadeRevisoes * 200
+    //Na próxima linha, o total de litros de combustível consumido ao longo da vida da motocicleta é calculado, efetuando a divisão da quilometragem total percorrida pela motocicleta e a quantidade de quilômetros que ela percorre por litro
+    const totalLitrosConsumidos = quilometragemTotal / quilometrosPorLitro
 
     //SAÍDA
-
+    //Na próxima linha os dados solicitados são apresentados em tela.
+    document.write(`Foram efetuadas ${quantidadeRevisoes} revisões, que contabilizaram um custo total de R$ ${custoRevisoes.toFixed(2)}. Já foram consumidos ${totalLitrosConsumidos} de combustível.`)
 </script>

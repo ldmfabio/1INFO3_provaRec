@@ -7,10 +7,20 @@
     */
 
     //Entrada
-
+    //Na próxima linha, a const valorVeiculo receberá o valor do veículo a ser comprado, que será informado pelo usuário
+    const valorVeiculo = Number(prompt("Informe o valor do veículo a ser comprado:"))
+    //Na próxima linha, a const entradaCompra recebe o valor da entrada a ser dada no financiamento, especificado no problema
+    const entradaCompra = 10000
 
     //Processamento
-
+    //Na próxima linha, cria-se uma let para que seja calculado o valor a ser financiado, que será o resultado do valor do veículo, que foi informado pelo usuário, menos o valor da entrada, especificado no problema. Diferente da const, uma let pode ser manipulada no decorrer do programa, conforme apresentado na linha 19. Uma const NUNCA poderá ser alterada, pois é um valor CONSTANTE.
+    let valorFinanciado = valorVeiculo - entradaCompra
+    //Na próxima linha, o valor financiado recebe o acréscimo de 35%, conforme especificado na descrição do problema. O cálculo também poderia ser feito da seguinte forma: valorFinanciado = valorFinanciado + (valorFinanciado * 0.35). Lembre-se que 35% é o equivalente a 35 / 100. O resultado da divisão de 35 / 100 é 0,35.
+    valorFinanciado = valorFinanciado + (valorFinanciado * (35 / 100))
+    //Na próxima linha, a const valorParcela receberá o cálculo resultante do valor total financiado, dividido nas 36 parcelas, que foram especificadas no problema.
+    const valorParcela = valorFinanciado / 36
 
     //Saída
+    //Na próxima linha os dados solicitados são apresentados em tela.
+    document.write(`O valor total financiado será R$ ${valorFinanciado.toFixed(2)} e o valor de cada parcela será R$ ${valorParcela.toFixed(2)}`)
 </script>
